@@ -1,0 +1,150 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Barlow Semi Condensed';
+    background-color: rgba(30, 29, 41, 1);
+}
+
+.container {
+    height: 100vh;
+    width: 100vw;
+}
+
+.remainder {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(241, 154, 55, 1);
+    font-size: 2rem;
+    padding: 5vw;
+    padding-right: 10rem;
+    
+}
+
+.options {
+    display: flex;
+    gap: 10px;
+    justify-content: right;
+    position: absolute;
+    top: 15px;
+    right: 143px;
+}
+
+.options button {
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 12px;
+}
+
+.options button:hover {
+    background-color: rgb(41, 41, 52);
+}
+
+.options button img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1);
+    background-color: transparent;
+}
+
+@media screen and (max-width: 768px) {
+    .remainder {
+        font-size: 1.5rem;
+        padding: 3vw;
+        padding-right: 5rem;
+    }
+
+    .options {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .remainder {
+        font-size: 1rem;
+        padding: 2vw;
+        padding-right: 2rem;
+    }
+
+    .options {
+        right: 5px;
+    }
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: rgb(183, 183, 183); 
+    margin: 20px;
+    margin-left: 5rem;
+    margin-right: 10rem;
+}
+
+.list {
+    display: flex;
+    padding: 5vw;
+    padding-top: 0rem;
+    padding-bottom: 1rem;
+}
+
+.input {
+    margin-left: 20px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+}
+.input:focus {
+    outline: none;
+    border: none;
+}
+
+.radio-container {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #1e1e2a;
+    border: 2px solid rgb(183, 183, 183);
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.1s ease, border-color 0.1s ease;
+}
+
+.radio-container:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 18px;
+    background-color: rgba(241, 154, 55, 1);
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #1e1e2a;
+}
+
+.radio-container:checked {
+    background-color: rgba(241, 154, 55, 1);
+    border-color: rgba(241, 154, 55, 1)531;
+}
+
+.radio-container:checked {
+    border: none; 
+}
+
+.hidden {
+    display: none;
+}
+
+.noRem {
+    color: rgb(183, 183, 183);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
